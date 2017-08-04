@@ -1,5 +1,9 @@
 var generar = document.getElementById('ejecutar');
+console.log(generar);
 var tablero = document.getElementById('tablero');
+console.log(tablero);
+// var siguiente = document.getElementById('next');
+
 
 function printMatrix (M){
     console.log ("___________________");
@@ -51,9 +55,9 @@ function shuffleArray(d) {
     d[c] = d[b];
     d[b] = a;
   }
-  return d
-};
+  return d;
 
+};
 function use_helper (soluciones, helper) {
    var pos = -1;
    var min = 10000;
@@ -104,7 +108,6 @@ function gen_solution (M, helper, n) {
     return false;
 } 
 
-
 function initMatrix (n) {
     var matrix = [];
     for (var i = 0; i < n; i++) {
@@ -120,6 +123,7 @@ function initMatrix (n) {
 generar.onclick = function () {
     tablero.innerHTML = '';
     var n = parseInt(document.getElementById('lados').value);
+    console.log(n);
     
     for( var i = 0; i < 1000; i++) {
         var M = initMatrix (n);
@@ -129,17 +133,33 @@ generar.onclick = function () {
             break;
         }
     }
+
+// siguiente.onclick = function () {
+//     tablero.innerHTML = '';
+//     var n = parseInt(document.getElementById('lados').value);
+    
+//     for( var i = 0; i < 1000; i++) {
+//         var M = initMatrix (n);
+//         var helper = gen_heuristic (n);
+//         if (gen_solution (M, helper, n) ) {
+//             printMatrix (M);
+//             break;
+//         }
+//     }
     
     var tabla = document.createElement('table');
     tabla.border = "1";
     for (var i = 0; i < n; i++) {
         var fila = document.createElement('tr');
+        console.log(fila);
         for (var j = 0; j < n; j++) {
             var celda = document.createElement('td');
+            console.log(celda);
             if (i % 2 == 0 && j % 2 != 0 || i % 2 != 0 && j % 2 == 0) {
                 celda.setAttribute('class', 'negro');
             }
-            var p = document.createElement('p');
+            var p = document.createElement('ps');
+            console.log(p);
             p.innerHTML = M[i][j];
             celda.appendChild(p);
             
@@ -150,7 +170,3 @@ generar.onclick = function () {
     tablero.appendChild(tabla);
 }
 
-var celda = document.getElementByTagname("td");
-for (var i = 0; i < celda.length; i++) {
-  celda[i]=" ";
-}

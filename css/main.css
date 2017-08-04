@@ -2,9 +2,29 @@
   background-color: black;
   color:white;
 }
-div#tablero{
-	align-content: center;
+.table{
 	text-align: center;
+	align-content: center;
+}
+#tablero{
+	padding: 40px;
+}
+.ejecutar{
+	text-align: center;
+	align-content: center;
+}
+
+}
+div.tablero{
+	align-content: center;
+	text-align: center;	
+}
+div.class{
+	background-image: url("negro.jpg");
+
+}
+td.negro{
+	background-image: url("negro.jpg");
 }
 body{
 	background-image: url("celeste.jpg");
@@ -12,7 +32,6 @@ body{
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-top: 8%;
-	margin-bottom: 5%;
 }
 td{
   width: 40px;
