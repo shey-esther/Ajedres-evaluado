@@ -149,3 +149,8 @@ generar.onclick = function () {
     }
     tablero.appendChild(tabla);
 }
+
+var celda = document.getElementByTagname("td");
+for (var i = 0; i < celda.length; i++) {
+  celda[i]=" ";
+}
