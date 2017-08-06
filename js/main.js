@@ -153,11 +153,13 @@ generar.onclick = function () {
         var fila = document.createElement('tr');
         console.log(fila);
         for (var j = 0; j < n; j++) {
+            //contiene las celdas con fondo negro
             var celda = document.createElement('td');
             console.log(celda);
             if (i % 2 == 0 && j % 2 != 0 || i % 2 != 0 && j % 2 == 0) {
                 celda.setAttribute('class', 'negro');
             }
+            // la variable p contiene los "ps" => en ps los #os aleatorios en cada casilla
             var p = document.createElement('ps');
             console.log(p);
             p.innerHTML = M[i][j];
